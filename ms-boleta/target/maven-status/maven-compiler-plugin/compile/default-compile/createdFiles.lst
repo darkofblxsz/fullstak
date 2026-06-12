@@ -1,0 +1,5 @@
+com\example\ms_boleta\MsBoletaApplication.class
+com\example\ms_boleta\service\BoletaService.class
+com\example\ms_boleta\controller\BoletaController.class
+com\example\ms_boleta\model\Boleta.class
+com\example\ms_boleta\repository\BoletaRepository.class
