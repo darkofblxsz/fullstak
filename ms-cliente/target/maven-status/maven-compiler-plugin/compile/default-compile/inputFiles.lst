@@ -1,0 +1,10 @@
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-cliente\src\main\java\com\example\ms_cliente\controller\ClienteController.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-cliente\src\main\java\com\example\ms_cliente\dto\ClienteRequestDTO.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-cliente\src\main\java\com\example\ms_cliente\dto\ClienteResposeDTO.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-cliente\src\main\java\com\example\ms_cliente\exception\GlobalExceptionHandler.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-cliente\src\main\java\com\example\ms_cliente\exception\ResourceNotFoundException.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-cliente\src\main\java\com\example\ms_cliente\model\Cliente.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-cliente\src\main\java\com\example\ms_cliente\MsClienteApplication.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-cliente\src\main\java\com\example\ms_cliente\repository\ClienteRepository.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-cliente\src\main\java\com\example\ms_cliente\service\ClienteService.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-cliente\src\main\java\com\example\ms_cliente\service\ClienteServiceImpl.java
