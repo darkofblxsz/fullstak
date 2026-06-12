@@ -1,0 +1,12 @@
+com\example\ms_envio\dto\EnvioResponseDTO.class
+com\example\ms_envio\dto\EnvioResponseDTO$EnvioResponseDTOBuilder.class
+com\example\ms_envio\controller\EnvioController.class
+com\example\ms_envio\dto\EnvioRequestDTO.class
+com\example\ms_envio\MsEnvioApplication.class
+com\example\ms_envio\services\EnvioServiceImpl.class
+com\example\ms_envio\modelo\Envio$EnvioBuilder.class
+com\example\ms_envio\services\EnvioService.class
+com\example\ms_envio\Feign\ClienteClient.class
+com\example\ms_envio\repository\EnvioRepository.class
+com\example\ms_envio\Feign\PedidoClient.class
+com\example\ms_envio\modelo\Envio.class

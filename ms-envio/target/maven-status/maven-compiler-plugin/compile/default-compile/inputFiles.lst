@@ -1,0 +1,10 @@
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-envio\src\main\java\com\example\ms_envio\controller\EnvioController.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-envio\src\main\java\com\example\ms_envio\dto\EnvioRequestDTO.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-envio\src\main\java\com\example\ms_envio\dto\EnvioResponseDTO.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-envio\src\main\java\com\example\ms_envio\Feign\ClienteClient.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-envio\src\main\java\com\example\ms_envio\Feign\PedidoClient.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-envio\src\main\java\com\example\ms_envio\modelo\Envio.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-envio\src\main\java\com\example\ms_envio\MsEnvioApplication.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-envio\src\main\java\com\example\ms_envio\repository\EnvioRepository.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-envio\src\main\java\com\example\ms_envio\services\EnvioService.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-envio\src\main\java\com\example\ms_envio\services\EnvioServiceImpl.java
