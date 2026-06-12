@@ -1,0 +1,11 @@
+com\example\ms_categoria\repository\CategoriaRepository.class
+com\example\ms_categoria\dto\CategoriaResponseDTO$CategoriaResponseDTOBuilder.class
+com\example\ms_categoria\service\CategoriaServiceImpl.class
+com\example\ms_categoria\exception\ResourceNotFoundException.class
+com\example\ms_categoria\model\Categoria.class
+com\example\ms_categoria\dto\CategoriaRequestDTO.class
+com\example\ms_categoria\service\CategoriaService.class
+com\example\ms_categoria\dto\CategoriaResponseDTO.class
+com\example\ms_categoria\MsCategoriaApplication.class
+com\example\ms_categoria\controller\CategoriaController.class
+com\example\ms_categoria\model\Categoria$CategoriaBuilder.class

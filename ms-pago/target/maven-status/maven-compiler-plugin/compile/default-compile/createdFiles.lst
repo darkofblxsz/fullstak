@@ -1,0 +1,5 @@
+com\example\ms_pago\model\Pago.class
+com\example\ms_pago\repository\PagoRepository.class
+com\example\ms_pago\service\PagoService.class
+com\example\ms_pago\controller\PagoController.class
+com\example\ms_pago\MsPagoApplication.class
