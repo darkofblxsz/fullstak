@@ -1,0 +1,16 @@
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-pedido\src\main\java\com\example\ms_pedido\client\StockClient.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-pedido\src\main\java\com\example\ms_pedido\controller\PedidoController.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-pedido\src\main\java\com\example\ms_pedido\dto\items.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-pedido\src\main\java\com\example\ms_pedido\dto\PedidoDetalleDTO.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-pedido\src\main\java\com\example\ms_pedido\dto\PedidoItemDTO.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-pedido\src\main\java\com\example\ms_pedido\dto\PedidoRequestDTO.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-pedido\src\main\java\com\example\ms_pedido\dto\PedidoResponseDTO.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-pedido\src\main\java\com\example\ms_pedido\dto\StockResponseDTO.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-pedido\src\main\java\com\example\ms_pedido\exception\ResourceNotFoundException.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-pedido\src\main\java\com\example\ms_pedido\model\Pedido.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-pedido\src\main\java\com\example\ms_pedido\model\PedidoDetalle.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-pedido\src\main\java\com\example\ms_pedido\MsPedidoApplication.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-pedido\src\main\java\com\example\ms_pedido\repository\PedidoDetalleRepository.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-pedido\src\main\java\com\example\ms_pedido\repository\PedidoRepository.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-pedido\src\main\java\com\example\ms_pedido\service\PedidoService.java
+C:\Users\AO-Alumno\Downloads\fullstak-main\fullstak-main\ms-pedido\src\main\java\com\example\ms_pedido\service\PedidoServiceImpl.java
