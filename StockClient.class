@@ -1,0 +1,8 @@
+package com.example.ms_pedido.exception;
+
+public class ResourceNotFoundException extends RuntimeException {
+
+    public ResourceNotFoundException(String mensaje) {
+        super(mensaje);
+    }
+}
