@@ -1,0 +1,7 @@
+example\ms_stock\controller\StockController.class
+example\ms_stock\repository\StockRepository.class
+example\ms_stock\exception\GlobalExceptionHandler.class
+example\ms_stock\MsStockApplication.class
+example\ms_stock\exception\StockNotFoundException.class
+example\ms_stock\model\Stock.class
+example\ms_stock\service\StockService.class
