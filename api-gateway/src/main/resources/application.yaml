@@ -1,0 +1,167 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+
+      routes:
+
+        - id: pedido
+          uri: lb://ms-pedido
+          predicates:
+            - Path=/api/pedidos/**
+
+        - id: pago
+          uri: lb://ms-pago
+          predicates:
+            - Path=/api/pagos/**
+
+        - id: stock
+          uri: lb://ms-stock
+          predicates:
+            - Path=/api/stock/**
+
+        - id: proveedor
+          uri: lb://ms-proveedor
+          predicates:
+            - Path=/api/proveedores/**
+
+        - id: producto
+          uri: lb://ms-producto
+          predicates:
+            - Path=/api/productos/**
+
+        - id: envio
+          uri: lb://ms-envio
+          predicates:
+            - Path=/api/envios/**
+
+        - id: cliente
+          uri: lb://ms-cliente
+          predicates:
+            - Path=/api/clientes/**
+
+        - id: categoria
+          uri: lb://ms-categoria
+          predicates:
+            - Path=/api/categorias/**
+
+        - id: carrito
+          uri: lb://ms-carrito
+          predicates:
+            - Path=/api/carrito/**
+
+        - id: boleta
+          uri: lb://ms-boleta
+          predicates:
+            - Path=/api/boletas/**
+
+        - id: swagger-pedido
+          uri: lb://ms-pedido
+          predicates:
+            - Path=/swagger/pedido/v3/api-docs
+          filters:
+            - RewritePath=/swagger/pedido/v3/api-docs, /v3/api-docs
+
+        - id: swagger-pago
+          uri: lb://ms-pago
+          predicates:
+            - Path=/swagger/pago/v3/api-docs
+          filters:
+            - RewritePath=/swagger/pago/v3/api-docs, /v3/api-docs
+
+        - id: swagger-stock
+          uri: lb://ms-stock
+          predicates:
+            - Path=/swagger/stock/v3/api-docs
+          filters:
+            - RewritePath=/swagger/stock/v3/api-docs, /v3/api-docs
+
+        - id: swagger-proveedor
+          uri: lb://ms-proveedor
+          predicates:
+            - Path=/swagger/proveedor/v3/api-docs
+          filters:
+            - RewritePath=/swagger/proveedor/v3/api-docs, /v3/api-docs
+
+        - id: swagger-producto
+          uri: lb://ms-producto
+          predicates:
+            - Path=/swagger/producto/v3/api-docs
+          filters:
+            - RewritePath=/swagger/producto/v3/api-docs, /v3/api-docs
+
+        - id: swagger-envio
+          uri: lb://ms-envio
+          predicates:
+            - Path=/swagger/envio/v3/api-docs
+          filters:
+            - RewritePath=/swagger/envio/v3/api-docs, /v3/api-docs
+
+        - id: swagger-cliente
+          uri: lb://ms-cliente
+          predicates:
+            - Path=/swagger/cliente/v3/api-docs
+          filters:
+            - RewritePath=/swagger/cliente/v3/api-docs, /v3/api-docs
+
+        - id: swagger-categoria
+          uri: lb://ms-categoria
+          predicates:
+            - Path=/swagger/categoria/v3/api-docs
+          filters:
+            - RewritePath=/swagger/categoria/v3/api-docs, /v3/api-docs
+
+        - id: swagger-carrito
+          uri: lb://ms-carrito
+          predicates:
+            - Path=/swagger/carrito/v3/api-docs
+          filters:
+            - RewritePath=/swagger/carrito/v3/api-docs, /v3/api-docs
+
+        - id: swagger-boleta
+          uri: lb://ms-boleta
+          predicates:
+            - Path=/swagger/boleta/v3/api-docs
+          filters:
+            - RewritePath=/swagger/boleta/v3/api-docs, /v3/api-docs
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /doc/swagger-ui.html
+    urls:
+      - name: ms-pedido
+        url: /swagger/pedido/v3/api-docs
+      - name: ms-pago
+        url: /swagger/pago/v3/api-docs
+      - name: ms-stock
+        url: /swagger/stock/v3/api-docs
+      - name: ms-proveedor
+        url: /swagger/proveedor/v3/api-docs
+      - name: ms-producto
+        url: /swagger/producto/v3/api-docs
+      - name: ms-envio
+        url: /swagger/envio/v3/api-docs
+      - name: ms-cliente
+        url: /swagger/cliente/v3/api-docs
+      - name: ms-categoria
+        url: /swagger/categoria/v3/api-docs
+      - name: ms-carrito
+        url: /swagger/carrito/v3/api-docs
+      - name: ms-boleta
+        url: /swagger/boleta/v3/api-docs
