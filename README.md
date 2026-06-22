@@ -1,14 +1,13 @@
 # Proyecto FullStack I - Ecosistema de Microservicios Minimarket
 
-Proyecto semestral desarrollado para la asignatura **Desarrollo FullStack I (DSY1103)**. El sistema está organizado como una arquitectura de microservicios con Eureka Server, API Gateway y servicios de negocio independientes.
+Proyecto semestral desarrollado para la asignatura **Desarrollo FullStack I **. El sistema está organizado como una arquitectura de microservicios con Eureka Server, API Gateway y servicios de negocio independientes.
 
 ## Integrantes
 
-- Mati Maldonado
-- Integrante 2
-- Integrante 3
+- Matias Maldonado
+- Victoria Gonzalez
+- Diego clavero
 
-> Reemplazar los nombres faltantes antes de subir a GitHub.
 
 ## Arquitectura general
 
