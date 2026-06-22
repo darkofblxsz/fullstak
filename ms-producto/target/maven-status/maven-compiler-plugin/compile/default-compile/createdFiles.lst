@@ -1,0 +1,11 @@
+com\example\ms_producto\dto\ProductoResponseDTO.class
+com\example\ms_producto\dto\ProductoRequestDTO.class
+com\example\ms_producto\dto\ProductoResponseDTO$ProductoResponseDTOBuilder.class
+com\example\ms_producto\services\ProductoServiceImpl.class
+com\example\ms_producto\config\SwaggerConfig.class
+com\example\ms_producto\producto\Producto$ProductoBuilder.class
+com\example\ms_producto\services\ProductoService.class
+com\example\ms_producto\producto\Producto.class
+com\example\ms_producto\MsProductoApplication.class
+com\example\ms_producto\repository\ProductoRepository.class
+com\example\ms_producto\controller\ProductoController.class
