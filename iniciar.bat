@@ -1,4 +1,6 @@
 @echo off
+cd /d "%~dp0"
+
 echo =====================================================================
 echo    Iniciando Ecosistema de Microservicios Supermercado
 echo =====================================================================
@@ -21,6 +23,7 @@ start "MS Cliente" cmd /k java -jar ms-cliente\target\ms-cliente-1.0.0-SNAPSHOT.
 start "MS Categoria" cmd /k java -jar ms-categoria\target\ms-categoria-1.0.0-SNAPSHOT.jar
 start "MS Carrito" cmd /k java -jar ms-carrito\target\ms-carrito-1.0.0-SNAPSHOT.jar
 start "MS Boleta" cmd /k java -jar ms-boleta\target\ms-boleta-1.0.0-SNAPSHOT.jar
+
 echo Esperando 15 segundos...
 timeout /t 15 /nobreak
 echo.
@@ -32,8 +35,10 @@ echo.
 echo =====================================================================
 echo    Ecosistema iniciado correctamente
 echo    Eureka Server Dashboard: http://localhost:8761
-echo    Swagger centralizado: http://localhost:8080/doc/swagger-ui.html
 echo    API Gateway Base URL: http://localhost:8080
+echo    Swagger producto: http://localhost:8086/doc/swagger-ui/index.html
+echo    Swagger stock: http://localhost:8083/doc/swagger-ui/index.html
+echo    Swagger categoria: http://localhost:8090/doc/swagger-ui/index.html
 echo =====================================================================
 echo.
 pause
