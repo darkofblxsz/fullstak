@@ -1,0 +1,244 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: minimarket-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: hola123
+      MYSQL_ROOT_HOST: "%"
+    ports:
+      - "3306:3306"
+    volumes:
+      - minimarket_mysql_data:/var/lib/mysql
+      - ./docker/mysql-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-phola123"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+    networks:
+      - minimarket-net
+
+  eureka-server:
+    build:
+      context: .
+      dockerfile: eureka-server/Dockerfile
+    container_name: eureka-server
+    restart: unless-stopped
+    ports:
+      - "8761:8761"
+    networks:
+      - minimarket-net
+
+  ms-pedido:
+    build:
+      context: .
+      dockerfile: ms-pedido/Dockerfile
+    container_name: ms-pedido
+    restart: unless-stopped
+    depends_on:
+      mysql: { condition: service_healthy }
+      eureka-server: { condition: service_started }
+    environment:
+      DB_USERNAME: root
+      DB_PASSWORD: hola123
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/db_pedidos?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=America/Santiago
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      EUREKA_INSTANCE_PREFERIPADDRESS: "true"
+    ports: ["8081:8081"]
+    networks: [minimarket-net]
+
+  ms-pago:
+    build:
+      context: .
+      dockerfile: ms-pago/Dockerfile
+    container_name: ms-pago
+    restart: unless-stopped
+    depends_on:
+      mysql: { condition: service_healthy }
+      eureka-server: { condition: service_started }
+    environment:
+      DB_USERNAME: root
+      DB_PASSWORD: hola123
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/db_pagos?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=America/Santiago
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      EUREKA_INSTANCE_PREFERIPADDRESS: "true"
+    ports: ["8082:8082"]
+    networks: [minimarket-net]
+
+  ms-stock:
+    build:
+      context: .
+      dockerfile: ms-stock/Dockerfile
+    container_name: ms-stock
+    restart: unless-stopped
+    depends_on:
+      mysql: { condition: service_healthy }
+      eureka-server: { condition: service_started }
+    environment:
+      DB_USERNAME: root
+      DB_PASSWORD: hola123
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/db_stock?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=America/Santiago
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      EUREKA_INSTANCE_PREFERIPADDRESS: "true"
+    ports: ["8083:8083"]
+    networks: [minimarket-net]
+
+  ms-proveedor:
+    build:
+      context: .
+      dockerfile: ms-proveedor/Dockerfile
+    container_name: ms-proveedor
+    restart: unless-stopped
+    depends_on:
+      mysql: { condition: service_healthy }
+      eureka-server: { condition: service_started }
+    environment:
+      DB_USERNAME: root
+      DB_PASSWORD: hola123
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/db_proveedores?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=America/Santiago
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      EUREKA_INSTANCE_PREFERIPADDRESS: "true"
+    ports: ["8084:8084"]
+    networks: [minimarket-net]
+
+  ms-producto:
+    build:
+      context: .
+      dockerfile: ms-producto/Dockerfile
+    container_name: ms-producto
+    restart: unless-stopped
+    depends_on:
+      mysql: { condition: service_healthy }
+      eureka-server: { condition: service_started }
+    environment:
+      DB_USERNAME: root
+      DB_PASSWORD: hola123
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/db_productos?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=America/Santiago
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      EUREKA_INSTANCE_PREFERIPADDRESS: "true"
+    ports: ["8086:8086"]
+    networks: [minimarket-net]
+
+  ms-envio:
+    build:
+      context: .
+      dockerfile: ms-envio/Dockerfile
+    container_name: ms-envio
+    restart: unless-stopped
+    depends_on:
+      mysql: { condition: service_healthy }
+      eureka-server: { condition: service_started }
+    environment:
+      DB_USERNAME: root
+      DB_PASSWORD: hola123
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/db_envios?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=America/Santiago
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      EUREKA_INSTANCE_PREFERIPADDRESS: "true"
+    ports: ["8088:8088"]
+    networks: [minimarket-net]
+
+  ms-cliente:
+    build:
+      context: .
+      dockerfile: ms-cliente/Dockerfile
+    container_name: ms-cliente
+    restart: unless-stopped
+    depends_on:
+      mysql: { condition: service_healthy }
+      eureka-server: { condition: service_started }
+    environment:
+      DB_USERNAME: root
+      DB_PASSWORD: hola123
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/db_clientes?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=America/Santiago
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      EUREKA_INSTANCE_PREFERIPADDRESS: "true"
+    ports: ["8089:8089"]
+    networks: [minimarket-net]
+
+  ms-categoria:
+    build:
+      context: .
+      dockerfile: ms-categoria/Dockerfile
+    container_name: ms-categoria
+    restart: unless-stopped
+    depends_on:
+      mysql: { condition: service_healthy }
+      eureka-server: { condition: service_started }
+    environment:
+      DB_USERNAME: root
+      DB_PASSWORD: hola123
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/db_categorias?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=America/Santiago
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      EUREKA_INSTANCE_PREFERIPADDRESS: "true"
+    ports: ["8090:8090"]
+    networks: [minimarket-net]
+
+  ms-carrito:
+    build:
+      context: .
+      dockerfile: ms-carrito/Dockerfile
+    container_name: ms-carrito
+    restart: unless-stopped
+    depends_on:
+      mysql: { condition: service_healthy }
+      eureka-server: { condition: service_started }
+    environment:
+      DB_USERNAME: root
+      DB_PASSWORD: hola123
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/db_carrito?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=America/Santiago
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      EUREKA_INSTANCE_PREFERIPADDRESS: "true"
+    ports: ["8091:8091"]
+    networks: [minimarket-net]
+
+  ms-boleta:
+    build:
+      context: .
+      dockerfile: ms-boleta/Dockerfile
+    container_name: ms-boleta
+    restart: unless-stopped
+    depends_on:
+      mysql: { condition: service_healthy }
+      eureka-server: { condition: service_started }
+    environment:
+      DB_USERNAME: root
+      DB_PASSWORD: hola123
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/db_boletas?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=America/Santiago
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      EUREKA_INSTANCE_PREFERIPADDRESS: "true"
+    ports: ["8092:8092"]
+    networks: [minimarket-net]
+
+  api-gateway:
+    build:
+      context: .
+      dockerfile: api-gateway/Dockerfile
+    container_name: api-gateway
+    restart: unless-stopped
+    depends_on:
+      eureka-server: { condition: service_started }
+      ms-pedido: { condition: service_started }
+      ms-pago: { condition: service_started }
+      ms-stock: { condition: service_started }
+      ms-proveedor: { condition: service_started }
+      ms-producto: { condition: service_started }
+      ms-envio: { condition: service_started }
+      ms-cliente: { condition: service_started }
+      ms-categoria: { condition: service_started }
+      ms-carrito: { condition: service_started }
+      ms-boleta: { condition: service_started }
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8761/eureka/
+      EUREKA_INSTANCE_PREFERIPADDRESS: "true"
+    ports:
+      - "8080:8080"
+    networks:
+      - minimarket-net
+
+volumes:
+  minimarket_mysql_data:
+
+networks:
+  minimarket-net:
+    driver: bridge
