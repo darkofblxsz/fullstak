@@ -1,0 +1,33 @@
+Victoria: Buenos días profesor, soy Victoria Gonzales,Matias Maldonado y Diego Clavero  y hoy presentaremos nuestro proyecto desarrollado con una arquitectura basada en microservicios.
+
+Victoria: Nuestro sistema se divide en una aplicación de servicios independientes facilitando el mantenimiento la escalabilidad, durante esta presentación mostraremos la arquitectura
+,como levantamos los proyectos utilizando docket y como los microservicios se comunican entre sí, bueno ahora le doy el paso a mi compañero Matias Maldonado
+
+
+Matias : Hola muy buenas,nuestro proyecto está compuesto por el eureka server, API gateway y los distintos, microservicios. Eureka registra automáticamente todos los microservicios activos,
+ el API gateway recibe todas las solicitudes y la redirige al microservicio correspondiente. La comunicación entre servicios se realiza mediante a el FeignClient, a continuación mi compañero Diego.
+
+Diego:	Bueno, ahora mostraremos como levantar los contenedores con docket, verificamos que todos esten en estado running mediante docket desktop o el comando docker ps 
+y luego ingresamos a docker para comprobar que todos los microservicios fueron registrados correctamente, esto lo podemos ver si es que el punto verde está encendido significa que se levante correctamente el microservicio
+
+
+Victoria: Ya. Una vez compramos que todos los microservicios aparecen registrados y también podemos mostrar que cada servicio puede funcionar de manera independiente gracias a la arquitectura de los microservicios mencionada 
+antes por mi compañera. Bueno, ahora Matías le va a explicar cómo se comunican entre sí estos microservicios.  
+
+Matias: Mostramos los lock de Docker y explicamos cómo una solicitud pasa por el app Gway hasta llegar a los microservicios correspondientes. 
+Cuando un servicio necesita información de otro, utiliza el fake client para comunicarse, para poner un ejemplo, en el caso más de MS Producto,
+ ¿qué necesita MS para poder realizar el flujo continuo y la comunicación entre microservicios? A continuación, mi compañero Diego le explicará la participación. 
+
+Diego:Bueno, en mi participación insistió en desarrollar uno de los microservicios, implementar su lógica, configurar los endpoints necesarios y verificar su funcionamiento dentro de Docker. 
+
+Victoria:Bueno, por mi parte eh mi participación fue las validaciones del proyecto, la revisión de un funcionamiento general y la verificación de que todos los microservicios trabajaran correctamente. 
+
+Victoria:Bueno, en nuestro caso para no utilizar PMAN utilizamos Swager, que es casi parecido donde eh podemos crear eh por ejemplo en este 
+caso productos. Bueno, ahora le vamos a mostrar que nosotros creamos, por ejemplo, un producto que se llama Notebook Lenovo. Una vez ya creado, 
+nos mostrará el código 200 o 2011 para verificar que este producto se creó correctamente. Bueno, ahora le doy el paso a mi compañero Matías. Buenas. 
+
+Matias:Me encargué de la configuración del API Gway, la integración entre microservicios, la configuración de Docker y
+ la revisión de los log para comprobar el correcto funcionamiento del sistema y que cumpla con el flujo de comunicación. 
+
+Victoria:Bueno, para finalizar pudimos observar que el proyecto funciona correctamente utilizando arquitectura de microservicios. ejecutada con Docker.
+ Todos los servicios se levantan correctamente.se registran y se comunican entre sí. Bueno, espero que esta presentación haya sido de su agrado y muchas gracias por escucharnos y su atención.. 
