@@ -68,3 +68,7 @@ http://localhost:8080
 1. Iniciar Docker Desktop antes de ejecutar el proyecto.
 2. Verificar que el puerto 3306 esté disponible.
 3. Confirmar en Eureka que todos los servicios estén en estado **UP** antes de realizar pruebas.
+
+
+## Video Grupal
+- https://drive.google.com/drive/folders/1e6n143Hvx1liH1MWeCHsL5HJWd6CCL69?usp=sharing
