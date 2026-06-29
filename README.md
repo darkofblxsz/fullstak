@@ -1,9 +1,9 @@
 # FullStack Supermercado - Arquitectura de Microservicios
 
-##Integrantes
--Matias Maldonado
--Diego Clavero
--Victoria Gonzalez
+## Integrantes
+- Matias Maldonado
+- Diego Clavero
+- Victoria Gonzalez
 
 ## Descripción
 Proyecto desarrollado con Spring Boot basado en arquitectura de microservicios para la gestión de un supermercado. La solución utiliza Docker para el despliegue, Eureka Server para el descubrimiento de servicios y API Gateway como punto de acceso.
